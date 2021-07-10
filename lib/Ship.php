@@ -2,6 +2,8 @@
 
 class Ship
 {
+    private $id;
+
     private $name;
 
     private $weaponPower = 0;
@@ -40,7 +42,7 @@ class Ship
     {
         return $this->weaponPower;
     }
-    
+
     /**
      * @return int
      */
@@ -107,4 +109,21 @@ class Ship
     {
         return $givenShip->strength > $this->strength;
     }
+
+    /**
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param integer $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
 }
